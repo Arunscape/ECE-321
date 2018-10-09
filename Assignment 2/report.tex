@@ -1,7 +1,8 @@
 \documentclass[letterpaper,12pt]{article}
 \synctex=1
 
-\usepackage[margin=1in]{geometry}
+% \usepackage[margin=1in]{geometry}
+\usepackage{geometry}
 % \usepackage{lipsum}
 %
 % \usepackage{hyperref}
@@ -17,23 +18,58 @@
 
 \begin{document}
 \maketitle
+% \newpage
 
 \section{Requirements and Psychology
   and
   The Syntactically Dangerous All and Plural in Specifications
   review}
 
-\section{Main contributions}
+\subsection{Main contributions}
 %You must include a brief description of each paper,
 % and an outline of similarities and differences
 % between these two papers
+Both articles include opinions and suggestions from authors on how to avoid
+ambiguous language to make your requirements document more precise, given their
+experience in the industry. Although their goals are the same, their approaches
+are different. The first article outlines three common defects: ``Deletion'',
+``Generalization'', and ``Distortion''. Deletion happens when a verb, or a
+so-called ``process-word'' is not defined. For example, the requirement
+statement might specify an action like making a report, but who makes the
+report, what is reported, when, and how is undefined. Generalization can happen
+when universal quatifiers are used, and certain exceptional cases arise, to
+which the general statement won't apply. Distortion occurs when the process is
+``reformulated into an event''. In the second article, the author focuses on
+when and how ``all'', ``each'', and plural words should be used, in order to
+minimize ambiguity. Article [2] focuses a bit more on the syntactic nature of
+the problems providing examples and, analyzing some math and other languages,
+while aritcle [1] focuses more on describing the application of techniques
+described.
 
 
-\section{Criticisms} %one paragraph
+\subsection{Criticisms} %one paragraph
+In both articles [1] and [2], the authors make excellent recommendations overall
+on how to improve the preciseness of the language used in requirements
+documents, and reducing ambiguous language. However, they both focus very
+narrowly on different aspects which can make requirements documents ambiguous.
+Unfortunately, following these authors' tips alone will not singlehandedly make
+your requirements documents amazingly super precise. For example, the author
+from article [2] suggests specific cases where ``all'', ``each'', or plural
+words should be used, but while following these recommendations, a statement
+which has defects outlined in [1] can still be made. For example, the sentence:
+``All intersections must have a single turning signal'' is precise according to
+article [2], since ``all'' is used to describe a property of the whole set
+(intersections). However, according to article [1], this statement suffers from
+generalization, since there might be exceptional cases where a turning signal
+may not make sense, or is impossible. The statement can be made more precise by
+saying: ``There should be only one turning signal per intersection.'' The
+suggestions from the authors, although excellent should be combined with
+multiple other techniques for making your requrements document more ideal, that
+is with more precice language, and less ambiguities.
 
-\section{}
+\subsection{}
 
-\subsection{Difference Between ``Generalization'' and ``All and Plural''}
+\subsubsection{Difference Between ``Generalization'' and ``All and Plural''}
 % Explain, in your own words, the difference between the term “generalization”
 % defined in [1] and “all and plural” described in [2]. Give an example
 % requirement statement (one sentence) for each of the two phenomena (indicate
@@ -42,49 +78,99 @@
 % differences that you explained in the first part of your answer. Do not use
 % examples from the articles. Use up to 6 sentences for the answer.
 
-\subsection{When Shouls We Use All vs. Each?}
+A requirement statement that suffers from the ``All and Plural'' defect can have
+multiple meanings, depending on how the reader understands the statement. On the
+other hand, requrement statements suffring from the ``Generalization'' defect
+tend to have ambiguities resulting from exceptional cases where a certain action
+may not be required, or is otherwise impossible.
+An example of a atatement with the ``All and Plural'' defect is: ``All traffic
+lights at any intersection shall have a single turning signal.'' In this
+sentence, one could interpret it as each traffic light having its own respective
+turning signal, or someone else could understand it as each intersection having
+only one turning signal.
+An example requirement with the ``Generalization'' defect is: ``Each traffic
+light shall have a left turning signal.`` In this case the ambiguity lies in
+whether special cases or exceptions can occur, where there could be situations
+such that a left turning signal is not required. For example, an intersection
+where left turns are not allowed.
+
+\subsubsection{When Should We Use All vs. Each?}
 % Based on the author’s discussion in paper [2], explain when we should use all
 % vs. each. Give an illustrative example that would highlight the difference.
 % Use up to 4 sentences for the answer.
 
-\subsection{Example Requirement Statement}
+According to the author in [2] ```all'' should be used when the intention is to
+talk about properties of the whole set, whereas ``each'' should be used when the
+intention is to talk about properties of each member of the set. For example, we
+could say: ``All intersections must have a single turning signal.'' to mean that
+there should be only one turning signal per intersection, or we could say:
+``Each traffic light at any intersection shall have a turning signal.'' to
+convey that every single traffic light should have a turning signal. It can be
+noted that these examples suffer from generalization, but that is outside of the
+scope of this question.
+
+\subsubsection{Example Requirement Statement}
 % Provide an example requirement statement that includes problems related to all
 % three defects listed in [1], i.e., deletion, generalization, and distortion.
 % Briefly explain how these three defects are implemented in your example. Use
 % up to 4 sentences for the answer.
 
-\subsection{Do I agree that distortion “often appears in domains with an extensive technical language”?}
+The following requirement statement includes problems related to all three
+defects listed in [1], i.e. deletion, generalization, and distortion: ``For all
+servers, when a server experiences downtime, a report to the system shall always
+occur.'' In this example, deletion is present, since the process of reporting is
+ambiguous unless the following are defined beforehand: Who is reporting to whom,
+what is being reported, when, and how is it being reported? This example also
+contains generalization, as indicated by the use of the universal quantifiers
+``all'' and ``always, which may include special cases where the action is not
+required, or otherwise impossible. Lastly, the example above also contains
+distortion, since it describes an event, which in this case is when a server
+experiences downtime. It does not describe how the report is initiated, and how
+it ends.
+
+
+\subsubsection{Do I agree that distortion “often appears in domains with an extensive technical language”?}
 % Do you agree with the author of [1] who suggests that distortion “often
 % appears in domains with an extensive technical language”? Explain your point
 % of view. Give an example requirement statement that includes a distortion and
 % uses technical language. Explain why this is a distortion. Use up to 4
 % sentences for the answer.
 
+I agree with the author of [1], who suggests that distortion ``often appears in
+domains with an extensive technical language''. It is basically natural for a
+human to describe a process conditional on some event happening, and it is also
+human to forget to elaborate, or to assume that the reader already understands
+what the writer is trying to say. An example requirement statement with
+distortion is: ``In emergency mode, when the hardware is fixed, the traffic
+light system should enter normal mode.'' In this case, the process by which the
+system transitions from emergency to normal mode is unknown to the reader from
+this statement alone.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Understanding the Customer: What Do We Know
   about Requirements Elicitation? review}
 
-\section{Main contributions} % one paragraph 
+\subsection{Main contributions} % one paragraph
+um
 
+\subsection{Criticisms} %one paragraph
+um
+\subsection{}
 
-\section{Criticisms} %one paragraph
-
-\section{}
-
-\subsection{Contrived Techniques}
+\subsubsection{Contrived Techniques}
 % List the “contrived techniques” that are mentioned by the authors (note that
 % they are mentioned in multiple places in the paper). Is card sorting a
 % contrived technique? Briefly explain how the author defines the card sorting.
 % Use up to 4 sentences for the answer.
+um
 
-\subsection{Unstructured vs. Structured Interviews}
+\subsubsection{Unstructured vs. Structured Interviews}
 % According to the authors, is it true that unstructured interviews are
 % preferred than the structured interviews? What is the main benefit, which was
 % mentioned by the authors, of using a structured interview? Use up to 3 sentences for the answer.
 
 
-\subsection{Main Technique for Elicitation of Requirements}
+\subsubsection{Main Technique for Elicitation of Requirements}
 % According to the authors, what is the main technique for elicitation of
 % requirements? Can the contrived techniques be used during an interview? Use up
 % to 2 sentences for the answer.
