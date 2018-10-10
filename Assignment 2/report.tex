@@ -29,22 +29,21 @@
 %You must include a brief description of each paper,
 % and an outline of similarities and differences
 % between these two papers
-Both articles include opinions and suggestions from authors on how to avoid
-ambiguous language to make your requirements document more precise, given their
-experience in the industry. Although their goals are the same, their approaches
-are different. The first article outlines three common defects: ``Deletion'',
-``Generalization'', and ``Distortion''. Deletion happens when a verb, or a
-so-called ``process-word'' is not defined. For example, the requirement
-statement might specify an action like making a report, but who makes the
-report, what is reported, when, and how is undefined. Generalization can happen
-when universal quatifiers are used, and certain exceptional cases arise, to
-which the general statement won't apply. Distortion occurs when the process is
-``reformulated into an event''. In the second article, the author focuses on
-when and how ``all'', ``each'', and plural words should be used, in order to
-minimize ambiguity. Article [2] focuses a bit more on the syntactic nature of
-the problems providing examples and, analyzing some math and other languages,
-while aritcle [1] focuses more on describing the application of techniques
-described.
+Both articles include opinions and suggestions from experienced authors on how
+to avoid ambiguous language to make your requirements document more precise.
+Although their goals are the same, the authors' approaches are different. The
+first article outlines three common defects: ``Deletion'', ``Generalization'',
+and ``Distortion''. Deletion happens when a verb, or a so-called
+``process-word'' is not defined. For example, the requirement statement might
+specify an action like making a report, but who makes the report, what is
+reported, when, and how is undefined. Generalization can happen when universal
+quatifiers are used, and certain exceptional cases arise, to which the general
+statement won't apply. Distortion occurs when the process is ``reformulated into
+an event''. In the second article, the author focuses on when and how ``all'',
+``each'', and plural words should be used, in order to minimize ambiguity.
+Article [2] focuses a bit more on the syntactic nature of the problems providing
+examples and, analyzing some math and other languages, while aritcle [1] focuses
+more on describing the application of techniques described.
 
 
 \subsection{Criticisms} %one paragraph
@@ -57,13 +56,13 @@ your requirements documents amazingly super precise. For example, the author
 from article [2] suggests specific cases where ``all'', ``each'', or plural
 words should be used, but while following these recommendations, a statement
 which has defects outlined in [1] can still be made. For example, the sentence:
-``All intersections must have a single turning signal'' is precise according to
-article [2], since ``all'' is used to describe a property of the whole set
-(intersections). However, according to article [1], this statement suffers from
-generalization, since there might be exceptional cases where a turning signal
-may not make sense, or is impossible. The statement can be made more precise by
-saying: ``There should be only one turning signal per intersection.'' The
-suggestions from the authors, although excellent should be combined with
+``All lights at any intersection must have a single turning signal'' is precise
+according to article [2], since ``all'' is used to describe a property of the
+whole set (lights). However, according to article [1], this statement suffers
+from generalization, since there might be exceptional cases where a turning
+signal may not make sense, or is impossible. The statement can be made more
+precise by saying: ``There should be only one turning signal per intersection.''
+The suggestions from the authors, although excellent should be combined with
 multiple other techniques for making your requrements document more ideal, that
 is with more precice language, and less ambiguities.
 
@@ -80,19 +79,18 @@ is with more precice language, and less ambiguities.
 
 A requirement statement that suffers from the ``All and Plural'' defect can have
 multiple meanings, depending on how the reader understands the statement. On the
-other hand, requrement statements suffring from the ``Generalization'' defect
+other hand, requrement statements suffering from the ``Generalization'' defect
 tend to have ambiguities resulting from exceptional cases where a certain action
-may not be required, or is otherwise impossible.
-An example of a atatement with the ``All and Plural'' defect is: ``All traffic
-lights at any intersection shall have a single turning signal.'' In this
-sentence, one could interpret it as each traffic light having its own respective
-turning signal, or someone else could understand it as each intersection having
-only one turning signal.
-An example requirement with the ``Generalization'' defect is: ``Each traffic
-light shall have a left turning signal.`` In this case the ambiguity lies in
-whether special cases or exceptions can occur, where there could be situations
-such that a left turning signal is not required. For example, an intersection
-where left turns are not allowed.
+may not be required, or is otherwise impossible. An example of a statement with
+the ``All and Plural'' defect is: ``All traffic lights at an intersection shall
+have a turning signal.'' In this sentence, one could interpret it as each
+traffic light having its own respective turning signal, or someone else could
+understand it as having only one turning signal at each intersection. An example
+requirement with the ``Generalization'' defect is: ``Each traffic light shall
+have a left turning signal.`` In this case the ambiguity lies in whether special
+cases or exceptions can occur, where there could be situations such that a left
+turning signal is not required, or is otherwise impossible. For example, an
+intersection where left turns are not allowed.
 
 \subsubsection{When Should We Use All vs. Each?}
 % Based on the author’s discussion in paper [2], explain when we should use all
@@ -105,9 +103,9 @@ intention is to talk about properties of each member of the set. For example, we
 could say: ``All intersections must have a single turning signal.'' to mean that
 there should be only one turning signal per intersection, or we could say:
 ``Each traffic light at any intersection shall have a turning signal.'' to
-convey that every single traffic light should have a turning signal. It can be
-noted that these examples suffer from generalization, but that is outside of the
-scope of this question.
+convey that every single traffic light should have a turning signal.
+% It can be noted that these examples suffer from generalization, but that is
+% outside of the scope of this question.
 
 \subsubsection{Example Requirement Statement}
 % Provide an example requirement statement that includes problems related to all
@@ -123,10 +121,10 @@ ambiguous unless the following are defined beforehand: Who is reporting to whom,
 what is being reported, when, and how is it being reported? This example also
 contains generalization, as indicated by the use of the universal quantifiers
 ``all'' and ``always, which may include special cases where the action is not
-required, or otherwise impossible. Lastly, the example above also contains
+required, or is otherwise impossible. Lastly, the example above also contains
 distortion, since it describes an event, which in this case is when a server
 experiences downtime. It does not describe how the report is initiated, and how
-it ends.
+it ends as a result of this action.
 
 
 \subsubsection{Do I agree that distortion “often appears in domains with an extensive technical language”?}
@@ -137,14 +135,14 @@ it ends.
 % sentences for the answer.
 
 I agree with the author of [1], who suggests that distortion ``often appears in
-domains with an extensive technical language''. It is basically natural for a
-human to describe a process conditional on some event happening, and it is also
-human to forget to elaborate, or to assume that the reader already understands
+domains with an extensive technical language''. It is natural for a human to
+describe a process conditional on some event happening, and it is also human to
+forget to elaborate, or to assume that the reader would automatically understand
 what the writer is trying to say. An example requirement statement with
 distortion is: ``In emergency mode, when the hardware is fixed, the traffic
-light system should enter normal mode.'' In this case, the process by which the
-system transitions from emergency to normal mode is unknown to the reader from
-this statement alone.
+light system should enter normal mode.'' This example suffers from distortion
+because the process by which the system transitions from emergency to normal
+mode is unknown to the reader from this statement alone.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Understanding the Customer: What Do We Know
@@ -155,16 +153,17 @@ The purpose of this paper is to outline the most common software requrements
 elicitation techniques used in the industry. The authors analyzed the overall
 trends of multiple studies related to requirements elicitation. According to the
 authors, they looked at two papers before, which attempted to do the same thing
-before, but those papers pointed out various strategies. Instead, this paper
-focuses on one-on-one scenarios, and draws some general conclusions from them.
-The paper discusses the benefits and drawbacks of structured and unstructured
-interviews, and also explores other non interviewing techniques such as protocol
-analysis, ``contrived techniques'' such as card sorting, and textual laddering.
-The authors then express what  they found to be the most effective combination
-of techniques for requirements elicitation, which is an interview with some
-stucture, i.e. some general questions to guide the customer, which can be
-combined with some non  interviewing techniques if specific information is
-required.
+as what the authors wanted to accomplish, but the authors of the previous papers
+included a wide range of various elecitation strategies. Instead, this paper
+focuses more specifically on one-on-one scenarios, and draws some general
+conclusions from them. The paper discusses the benefits and drawbacks of
+structured and unstructured interviews, and also explores other non interviewing
+techniques such as protocol analysis, ``contrived techniques'' such as card
+sorting, and textual laddering. The authors then express what  they found to be
+the most effective combination of techniques for requirements elicitation, which
+is an interview with some stucture, i.e. some general questions to guide the
+customer, that can be combined with some non  interviewing techniques if
+specific information is required.
 
 
 \subsection{Criticisms} %one paragraph
@@ -175,17 +174,17 @@ made. Although the paper is focused on software requirements elicitation, the
 authors of the paper also looked at studies they deemed to be ``related fields''
 such as marketing. This raises some questions about the conclusions the authors
 are drawing from the data, and how applicable it is to software requirements
-elicitation. The article even  explicitly states that ``when we try to abstract
-a general conclu- sion from multiple studies, we find that each study has
-measured completely dif- ferent effects of the elicitation approaches. This
-makes it hard to summarize multiple studies in a straightforward way.'' Although
-the authors claim to be doing this to find some broad conclusions, a lot of
-detail is lost that may contain some interesting information. The authors
-mention that their measurements individually don't give a complete picture, and
-that by comparing such a large amount of variables, they've lost the ability to
-combine the data statistically, which is arguably one of the more rigorous
-approaches for extracting conclusions from the results.
-
+elicitation. The article also explicitly states that ``when we try to abstract a
+general conclusion from multiple studies, we find that each study has measured
+completely different effects of the elicitation approaches. This makes it hard
+to summarize multiple studies in a straightforward way.'' Although the authors
+claim to be doing this to find some broad conclusions, a lot of detail is lost
+that may contain some interesting information, in an area they originally were
+focusing in on. The authors also mention that their measurements individually
+don't give a complete picture, and that by comparing such a large amount of
+variables, they've lost the ability to combine the data statistically, which is
+arguably one of the more rigorous approaches for extracting conclusions from the
+results.
 
 \subsection{}
 
@@ -202,10 +201,10 @@ The ``contrived techniques`` mentioned by the authors are as follows:
  \item card sorting
 \end{enumerate}
 The author defines ``contrived techniques'' as a process that asks users to
-``engage in some kind of artificial task to help elicit information''. Accoring
+``engage in some kind of artificial task to help elicit information''. According
 to this definition, card sorting is a contrived technique, since the user is
-asked to arrange some concepts or entities from the problem domain into groups,
-which fits the description of an ``artificial task'' that helps with the
+asked to arrange some concepts or entities from the problem domain into groups.
+This fits the description of an ``artificial task'' that helps with the
 elicitation of information.
 
 \subsubsection{Unstructured vs. Structured Interviews}
@@ -214,7 +213,7 @@ elicitation of information.
 % mentioned by the authors, of using a structured interview? Use up to 3 sentences for the answer.
 
 According to the authors, ``interviews with some stucture are preferable to
-completely unstructures ones.'' In their view, the main benefit of  structured
+completely unstructured ones.'' In their view, the main benefit of  structured
 interviews is that more customer needs tend to be identified during structured
 interviews. They also mention that the experience of the developers doing the
 interviewing did not affect the amount of customer needs identified.
