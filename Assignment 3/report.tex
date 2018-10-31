@@ -21,7 +21,9 @@
 \begin{document}
 \maketitle
 % \newpage
-
+\begin{center}
+ \textit{\textbf{*Axioms begin on next page*}}
+\end{center}
 algebra QueueOfCars
 \begin{quote}
  imports Integer, Boolean;\\
@@ -50,21 +52,21 @@ algebra QueueOfCars
   CarDeparts(New) = error;\\
   CarDeparts(CarArrives(c,q)) =
   \begin{quote}
-   if (IsEmpty(q)) then q;\\
+   if IsEmpty(q) then q;\\
    else CarArrives(c,CarDeparts(q));
   \end{quote}
   IsEmpty(New) = true;\\
-  IsEmpty(CarArrives(q,c)) = false;\\
+  IsEmpty(CarArrives(c,q)) = false;\\
   NumberOfCars(New) = 0;\\
-  NumberOfCars(CarArrives(c,q)) =
-  \begin{quote}
-   if (IsEmpty(q)) then 0;\\
-   else NumberOfCars(CarDeparts(q)) + 1;
-  \end{quote}
+  NumberOfCars(CarArrives(c,q)) = NumberOfCars(q) + 1;\\
+  % \begin{quote}
+  %  if IsEmpty(q) then 1;\\
+  %  else NumberOfCars(CarDeparts(q)) + 1;
+  % \end{quote}
   Longer(New, i) = false;\\
   Longer(CarArrives(c,q), i) =
   \begin{quote}
-   if (i $>$ NumberOfCars(q)) then true;\\
+   if (i $<$ NumberOfCars(q) + 1) then true;\\
    else false;
   \end{quote}
   FirstCar(New) = error;\\
@@ -92,18 +94,18 @@ algebra QueueOfCars
    if (Position(c1,q $>$ -1) then 1;\\
    else 0;
   \end{quote}
+  \newpage
   WhichQueue(CarArrives(c,q), CarArrives(c1,q1), c2) =
   \begin{quote}
    if Position(c2,q) $>$ -1 then 1;\\
-   else if Positon(c2, q2) $>$ -1 then 2;\\
+   else if Positon(c2, q1) $>$ -1 then 2;\\
    else 0;
   \end{quote}
   Position(c, New) = -1;\\
   Position(c1, CarArrives(c,q)) =
   \begin{quote}
-   if IsEmpty(q) then -1;\\
-   else if FirstCar(q) == c1 then 0;\\
-   else Position(c, CarDeparts(q)) + 1;
+   if (c1 == c) then NumberOfCars(q);\\
+   else Position(c1,q);
   \end{quote}
   
   
