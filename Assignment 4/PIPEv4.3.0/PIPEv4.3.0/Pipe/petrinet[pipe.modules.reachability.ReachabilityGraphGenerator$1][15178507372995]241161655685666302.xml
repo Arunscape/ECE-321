@@ -10,9 +10,6 @@
         <labels x="592" y="21" width="117" height="16" border="true">
             <text>Default -&gt; GreenG1</text>
         </labels>
-        <labels x="555" y="360" width="117" height="15" border="true">
-            <text>Default -&gt; Night</text>
-        </labels>
         <place id="1">
             <graphics>
                 <position x="105.0" y="60.0"/>
@@ -447,7 +444,7 @@
                 <value>0</value>
             </orientation>
             <rate>
-                <value>1.0</value>
+                <value>1</value>
             </rate>
             <timed>
                 <value>false</value>
@@ -473,7 +470,7 @@
                 <value>0</value>
             </orientation>
             <rate>
-                <value>1.0</value>
+                <value>1</value>
             </rate>
             <timed>
                 <value>false</value>
@@ -491,32 +488,6 @@
             </graphics>
             <name>
                 <value>Default -&gt; GreenG1</value>
-                <graphics>
-                    <offset x="-5.0" y="35.0"/>
-                </graphics>
-            </name>
-            <orientation>
-                <value>0</value>
-            </orientation>
-            <rate>
-                <value>1.0</value>
-            </rate>
-            <timed>
-                <value>false</value>
-            </timed>
-            <infiniteServer>
-                <value>false</value>
-            </infiniteServer>
-            <priority>
-                <value>1</value>
-            </priority>
-        </transition>
-        <transition id="Default -&gt; Night">
-            <graphics>
-                <position x="630.0" y="390.0"/>
-            </graphics>
-            <name>
-                <value>Default -&gt; Night</value>
                 <graphics>
                     <offset x="-5.0" y="35.0"/>
                 </graphics>
@@ -563,19 +534,6 @@
             <arcpath id="001" x="637" y="270" curvePoint="false"/>
             <type value="normal"/>
         </arc>
-        <arc id="1 to Default -&gt; Night" source="1" target="Default -&gt; Night">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="129" y="79" curvePoint="false"/>
-            <arcpath id="001" x="637" y="393" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
         <arc id="1 to GreenG1" source="1" target="Default -&gt; GreenG1">
             <graphics/>
             <inscription>
@@ -613,19 +571,6 @@
             </tagged>
             <arcpath id="000" x="202" y="721" curvePoint="false"/>
             <arcpath id="001" x="636" y="291" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="B3_OFF to Default -&gt; Night" source="B3_OFF" target="Default -&gt; Night">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="204" y="723" curvePoint="false"/>
-            <arcpath id="001" x="636" y="413" curvePoint="false"/>
             <type value="normal"/>
         </arc>
         <arc id="B3_OFF to GreenG1" source="B3_OFF" target="Default -&gt; GreenG1">
@@ -841,130 +786,6 @@
             <arcpath id="002" x="201" y="585" curvePoint="false"/>
             <type value="normal"/>
         </arc>
-        <arc id="Default -&gt; Night to 1_OFF" source="Default -&gt; Night" target="1_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="647" y="393" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="204" y="79" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to 2_FR" source="Default -&gt; Night" target="2_FR">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="647" y="390" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="205" y="167" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to 3_FR" source="Default -&gt; Night" target="3_FR">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="647" y="396" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="206" y="241" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to B3_OFF" source="Default -&gt; Night" target="B3_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="636" y="409" curvePoint="false"/>
-            <arcpath id="001" x="204" y="723" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to Clock" source="Default -&gt; Night" target="Clock">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="646" y="408" curvePoint="false"/>
-            <arcpath id="001" x="762" y="402" curvePoint="false"/>
-            <arcpath id="002" x="129" y="799" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to P1_OFF" source="Default -&gt; Night" target="P1_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="647" y="399" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="206" y="372" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to P2_OFF" source="Default -&gt; Night" target="P2_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="646" y="402" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="206" y="445" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to P3_OFF" source="Default -&gt; Night" target="P3_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="646" y="405" curvePoint="false"/>
-            <arcpath id="001" x="747" y="402" curvePoint="false"/>
-            <arcpath id="002" x="206" y="518" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="Default -&gt; Night to S2_OFF" source="Default -&gt; Night" target="S2_OFF">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="636" y="405" curvePoint="false"/>
-            <arcpath id="001" x="205" y="649" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
         <arc id="P2 to Default -&gt; DefaultB3" source="P2" target="Default -&gt; DefaultB3">
             <graphics/>
             <inscription>
@@ -1004,19 +825,6 @@
             <arcpath id="001" x="637" y="54" curvePoint="false"/>
             <type value="normal"/>
         </arc>
-        <arc id="P2 to Default -&gt; Night" source="P2" target="Default -&gt; Night">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="131" y="445" curvePoint="false"/>
-            <arcpath id="001" x="637" y="397" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
         <arc id="S2_OFF to Default -&gt; DefaultB3" source="S2_OFF" target="Default -&gt; DefaultB3">
             <graphics/>
             <inscription>
@@ -1041,19 +849,6 @@
             </tagged>
             <arcpath id="000" x="203" y="647" curvePoint="false"/>
             <arcpath id="001" x="636" y="288" curvePoint="false"/>
-            <type value="normal"/>
-        </arc>
-        <arc id="S2_OFF to Default -&gt; Night" source="S2_OFF" target="Default -&gt; Night">
-            <graphics/>
-            <inscription>
-                <value>Default,1</value>
-                <graphics/>
-            </inscription>
-            <tagged>
-                <value>false</value>
-            </tagged>
-            <arcpath id="000" x="205" y="649" curvePoint="false"/>
-            <arcpath id="001" x="637" y="401" curvePoint="false"/>
             <type value="normal"/>
         </arc>
         <arc id="S2_OFF to GreenG1" source="S2_OFF" target="Default -&gt; GreenG1">
